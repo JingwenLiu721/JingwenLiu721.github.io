@@ -340,10 +340,11 @@
 }
 
 .clustrmaps-wrap {
-  display: none;
+  display: none !important;
 }
 
 #clustrmaps-widget {
+  display: none !important;
   width: 365px;
   max-width: 100%;
 }
