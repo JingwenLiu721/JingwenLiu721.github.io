@@ -339,16 +339,6 @@
   color: var(--muted);
 }
 
-.clustrmaps-wrap {
-  display: none !important;
-}
-
-#clustrmaps-widget {
-  display: none !important;
-  width: 365px;
-  max-width: 100%;
-}
-
 @media (max-width: 760px) {
   .page-shell {
     padding: 18px 16px 36px;
