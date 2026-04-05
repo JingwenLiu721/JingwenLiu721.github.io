@@ -141,9 +141,9 @@ span.highlight {
 }
 
 :root {
-  --page-bg: #e8eef2;
-  --page-bg-soft: #f5f8fb;
-  --surface: rgba(252, 254, 255, 0.86);
+  --page-bg: #f1f8ff;
+  --page-bg-soft: #fbfdff;
+  --surface: rgba(254, 255, 255, 0.92);
   --surface-strong: rgba(255, 255, 255, 0.94);
   --text: #26353d;
   --muted: #61727c;
@@ -163,9 +163,9 @@ body {
   margin: 0;
   color: var(--text);
   background:
-    radial-gradient(circle at top left, rgba(208, 225, 234, 0.5), transparent 28%),
-    radial-gradient(circle at top right, rgba(183, 206, 221, 0.42), transparent 32%),
-    linear-gradient(180deg, var(--page-bg-soft) 0%, #edf3f7 52%, #e4ecf1 100%);
+    radial-gradient(circle at top left, rgba(170, 218, 248, 0.72), transparent 31%),
+    radial-gradient(circle at top right, rgba(156, 204, 235, 0.6), transparent 35%),
+    linear-gradient(180deg, var(--page-bg-soft) 0%, #f0f8ff 52%, #e1f0fb 100%);
 }
 
 p,
