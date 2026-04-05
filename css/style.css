@@ -325,6 +325,106 @@
   border-color: rgba(181, 93, 29, 0.24);
 }
 
+.photo-album-section {
+  overflow: hidden;
+}
+
+.album-shell {
+  display: grid;
+  grid-template-areas: 'prev stage next';
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: center;
+  margin-top: 18px;
+}
+
+.album-stage {
+  grid-area: stage;
+  position: relative;
+  min-height: 420px;
+  padding: 18px;
+  border-radius: 24px;
+  background:
+    linear-gradient(160deg, rgba(233, 241, 245, 0.88), rgba(251, 248, 243, 0.92));
+  border: 1px solid rgba(24, 95, 125, 0.1);
+}
+
+.album-slide {
+  margin: 0;
+}
+
+.album-photo {
+  display: block;
+  width: 100%;
+  max-height: 540px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(36, 40, 28, 0.14);
+}
+
+.album-caption {
+  margin: 12px 4px 0;
+  color: #4b606b;
+  text-align: center;
+}
+
+.album-arrow {
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(24, 95, 125, 0.14);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.84);
+  color: #185f7d;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 120ms ease, background 120ms ease, color 120ms ease;
+}
+
+.album-arrow[data-album-prev] {
+  grid-area: prev;
+}
+
+.album-arrow[data-album-next] {
+  grid-area: next;
+}
+
+.album-arrow:hover,
+.album-arrow:focus {
+  transform: translateY(-1px);
+  background: #185f7d;
+  color: #ffffff;
+}
+
+.album-arrow:disabled {
+  opacity: 0.4;
+  cursor: default;
+  transform: none;
+  background: rgba(255, 255, 255, 0.84);
+  color: #185f7d;
+}
+
+.album-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.album-dot {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(24, 95, 125, 0.22);
+  cursor: pointer;
+}
+
+.album-dot.is-active {
+  background: #185f7d;
+}
+
 .site-footer {
   width: min(100%, 1100px);
   margin: 0 auto;
@@ -401,6 +501,24 @@
   .timeline-item {
     grid-template-columns: 1fr;
     gap: 2px;
+  }
+
+  .album-shell {
+    grid-template-areas:
+      'stage stage'
+      'prev next';
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .album-stage {
+    min-height: auto;
+    padding: 14px;
+  }
+
+  .album-arrow {
+    justify-self: stretch;
+    width: 100%;
   }
 
   .research-list li {
