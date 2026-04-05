@@ -433,55 +433,16 @@
   background: #185f7d;
 }
 
-.clustrmaps-corner {
-  position: fixed;
-  right: 12px;
-  bottom: 12px;
-  z-index: 15;
-  width: 92px;
-  padding: 6px;
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.84);
-  border: 1px solid rgba(24, 95, 125, 0.1);
-  box-shadow: 0 10px 24px rgba(36, 40, 28, 0.12);
-  backdrop-filter: blur(8px);
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(12px);
-  transition: opacity 180ms ease, transform 180ms ease;
+.clustrmaps-footer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
 }
 
 #clustrmaps-widget {
-  width: 80px;
+  width: 180px;
   max-width: 100%;
   overflow: hidden;
-  border-radius: 10px;
-}
-
-.clustrmaps-placeholder {
-  display: none;
-  place-items: center;
-  width: 100%;
-  aspect-ratio: 1;
-  border-radius: 10px;
-  background:
-    linear-gradient(135deg, rgba(24, 95, 125, 0.14), rgba(181, 93, 29, 0.14)),
-    rgba(255, 255, 255, 0.92);
-  color: #185f7d;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-#clustrmaps-widget.is-loading .clustrmaps-placeholder {
-  display: grid;
-}
-
-.clustrmaps-corner.is-visible {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0);
 }
 
 .site-footer {
@@ -584,15 +545,8 @@
     width: 100%;
   }
 
-  .clustrmaps-corner {
-    right: 8px;
-    bottom: 8px;
-    width: 78px;
-    padding: 4px;
-  }
-
   #clustrmaps-widget {
-    width: 68px;
+    width: 140px;
   }
 
   .research-list li {

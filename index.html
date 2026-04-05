@@ -20,7 +20,7 @@
         <nav class="section-nav" aria-label="Section navigation">
           <a href="#biography">Biography</a>
           <a href="#research">Research</a>
-          <a href="#activities">Activities</a>
+          <a href="#activities">Upcoming Activities</a>
           <a href="#news">News</a>
           <a href="#publications">Publications</a>
           <a href="#teaching">Teaching</a>
@@ -247,7 +247,7 @@
       </section>
 
       <section id="photo-album" class="content-section photo-album-section">
-        <h2>Community-engaged Research Experience</h2>
+        <h2>Community-Engaged Research Experience</h2>
         <div class="album-shell" data-album>
           <button
             class="album-arrow"
@@ -334,14 +334,11 @@
     </main>
 
     <footer class="site-footer">
+      <div class="clustrmaps-footer" aria-label="Visitor map">
+        <div id="clustrmaps-widget"></div>
+      </div>
       <p id="last-updated"></p>
     </footer>
-
-    <div class="clustrmaps-corner" aria-label="Visitor map">
-      <div id="clustrmaps-widget" class="is-loading">
-        <div class="clustrmaps-placeholder" aria-hidden="true">Map</div>
-      </div>
-    </div>
     <script
       type="text/javascript"
       id="clustrmaps"
@@ -436,28 +433,6 @@
         });
 
         render();
-      })();
-
-      (function () {
-        const widget = document.getElementById('clustrmaps-widget');
-        const corner = document.querySelector('.clustrmaps-corner');
-        if (!widget || !corner) return;
-
-        function updateVisibility() {
-          const scrollBottom = window.scrollY + window.innerHeight;
-          const revealThreshold = document.documentElement.scrollHeight - 220;
-          corner.classList.toggle('is-visible', scrollBottom >= revealThreshold);
-        }
-
-        updateVisibility();
-        window.addEventListener('scroll', updateVisibility, { passive: true });
-        window.addEventListener('resize', updateVisibility);
-
-        window.setTimeout(function () {
-          if (widget.children.length > 1 || widget.textContent.trim() !== 'Map') {
-            widget.classList.remove('is-loading');
-          }
-        }, 1500);
       })();
     </script>
   </body>
