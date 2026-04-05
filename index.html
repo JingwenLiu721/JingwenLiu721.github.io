@@ -337,6 +337,17 @@
       <p id="last-updated"></p>
     </footer>
 
+    <div class="clustrmaps-corner" aria-label="Visitor map">
+      <div id="clustrmaps-widget" class="is-loading">
+        <div class="clustrmaps-placeholder" aria-hidden="true">Map</div>
+      </div>
+    </div>
+    <script
+      type="text/javascript"
+      id="clustrmaps"
+      src="//clustrmaps.com/map_v2.js?d=mc7FZWjaJ8V7LsOCONoTaHVfNedHZn8_KFSZwUUwqI0&cl=ffffff&w=a"
+    ></script>
+
     <script>
       const lastModified = new Date(document.lastModified);
       const options = { year: 'numeric', month: 'long' };
@@ -425,6 +436,28 @@
         });
 
         render();
+      })();
+
+      (function () {
+        const widget = document.getElementById('clustrmaps-widget');
+        const corner = document.querySelector('.clustrmaps-corner');
+        if (!widget || !corner) return;
+
+        function updateVisibility() {
+          const scrollBottom = window.scrollY + window.innerHeight;
+          const revealThreshold = document.documentElement.scrollHeight - 220;
+          corner.classList.toggle('is-visible', scrollBottom >= revealThreshold);
+        }
+
+        updateVisibility();
+        window.addEventListener('scroll', updateVisibility, { passive: true });
+        window.addEventListener('resize', updateVisibility);
+
+        window.setTimeout(function () {
+          if (widget.children.length > 1 || widget.textContent.trim() !== 'Map') {
+            widget.classList.remove('is-loading');
+          }
+        }, 1500);
       })();
     </script>
   </body>
