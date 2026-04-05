@@ -64,13 +64,14 @@
 }
 
 a {
-  color: #1772d0;
+  color: #185f7d;
   text-decoration: none;
+  transition: color 0.2s ease, opacity 0.2s ease;
 }
 
 a:focus,
 a:hover {
-  color: #f09228;
+  color: #b55d1d;
   text-decoration: none;
 }
 
@@ -80,37 +81,38 @@ th,
 tr,
 p,
 a {
-  font-family: Helvetica, 'Lato', Verdana, sans-serif;
-  font-size: 16px;
-  font-weight: 300;
+  font-family: 'Lato', 'Avenir Next', 'Segoe UI', sans-serif;
+  font-size: 17px;
+  font-weight: 400;
 }
 
 strong {
-  font-family: Helvetica, 'Lato', Verdana, sans-serif;
-  font-size: 16px;
+  font-family: 'Lato', 'Avenir Next', 'Segoe UI', sans-serif;
+  font-size: 17px;
   font-weight: 600;
-
 }
 
 h2 {
   margin: 0;
   font-weight: 600;
-  font-family: Helvetica, 'Lato', Verdana, sans-serif;
-  font-size: 22px;
+  font-family: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+  font-size: 28px;
+  line-height: 1.15;
+  color: #173240;
 }
 
 .papertitle {
-  font-family: Helvetica, 'Lato', Verdana, sans-serif;
-  font-size: 16px;
+  font-family: 'Lato', 'Avenir Next', 'Segoe UI', sans-serif;
+  font-size: 17px;
   font-weight: 600;
 }
 
 .name {
   padding-top: 20px;
   margin: 0;
-  font-family: Helvetica, 'Lato', Verdana, sans-serif;
+  font-family: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
   font-size: 32px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .one {
@@ -135,5 +137,38 @@ h2 {
 }
 
 span.highlight {
-  background-color: rgba(151, 248, 215, 0.3);
+  background-color: rgba(196, 225, 233, 0.65);
+}
+
+:root {
+  --page-bg: #e8eef2;
+  --page-bg-soft: #f5f8fb;
+  --surface: rgba(252, 254, 255, 0.86);
+  --surface-strong: rgba(255, 255, 255, 0.94);
+  --text: #26353d;
+  --muted: #61727c;
+  --line: rgba(34, 67, 82, 0.12);
+  --shadow: 0 22px 48px rgba(73, 56, 31, 0.12);
+  --shadow-soft: 0 12px 26px rgba(73, 56, 31, 0.08);
+  --accent: #185f7d;
+  --accent-deep: #133f53;
+  --accent-warm: #c46a2b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(208, 225, 234, 0.5), transparent 28%),
+    radial-gradient(circle at top right, rgba(183, 206, 221, 0.42), transparent 32%),
+    linear-gradient(180deg, var(--page-bg-soft) 0%, #edf3f7 52%, #e4ecf1 100%);
+}
+
+p,
+li {
+  line-height: 1.8;
 }
