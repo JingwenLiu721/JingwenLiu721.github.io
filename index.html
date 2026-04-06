@@ -108,6 +108,13 @@
           collaborators.
         </p>
         <div class="stack-list">
+            <article class="stack-item">
+            <p class="stack-title">
+              Session Chair, Flash Session: Life Course Health and Aging in Low- and Middle-Income Countries
+            </p>
+            <p>Thursday, May 7, 2026 • 9:30 AM-10:45 AM</p>
+            <p>Room 102 (subject to change)</p>
+          </article>
           <article class="stack-item">
             <p class="stack-title">
               Presenter, <em>“Stratified Safety Nets: Race/Ethnicity in the Dynamic Bidirectional
@@ -125,13 +132,6 @@
             <p>Paper Session: Demographic Change and Family Inequality in Low- and Middle-Income Countries</p>
             <p>Saturday, May 9, 2026 • 8:30 AM-9:45 AM</p>
             <p>Room 280 (subject to change)</p>
-          </article>
-          <article class="stack-item">
-            <p class="stack-title">
-              Session Chair, Flash Session: Life Course Health and Aging in Low- and Middle-Income Countries
-            </p>
-            <p>Thursday, May 7, 2026 • 9:30 AM-10:45 AM</p>
-            <p>Room 102 (subject to change)</p>
           </article>
         </div>
       </section>
@@ -361,7 +361,7 @@
         const toggle = document.getElementById('news-toggle');
         if (!list || !toggleItem || !toggle) return;
 
-        const items = Array.from(list.querySelectorAll(':scope > li')).filter(
+        const items = Array.from(list.children).filter(
           (item) => item.id !== 'news-toggle-item'
         );
 
