@@ -8,10 +8,10 @@
 }
 
 #biography { order: 1; }
-#funding { order: 2; }
-#publications { order: 3; }
-#activities { order: 4; }
-#news { order: 5; }
+#news { order: 2; }
+#activities { order: 3; }
+#funding { order: 4; }
+#publications { order: 5; }
 #teaching { order: 6; }
 #photo-album { order: 7; }
 
@@ -317,6 +317,10 @@
 .timeline-date {
   font-weight: 600;
   color: #184d65;
+}
+
+.news-highlight {
+  color: var(--accent);
 }
 
 .timeline-toggle {
