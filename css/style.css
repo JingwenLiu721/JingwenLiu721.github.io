@@ -3,7 +3,17 @@
   margin: 0 auto;
   padding: 24px 20px 56px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
+
+#biography { order: 1; }
+#funding { order: 2; }
+#publications { order: 3; }
+#activities { order: 4; }
+#news { order: 5; }
+#teaching { order: 6; }
+#photo-album { order: 7; }
 
 .hero-card {
   margin-bottom: 34px;
